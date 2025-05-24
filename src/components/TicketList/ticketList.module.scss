@@ -1,0 +1,16 @@
+.search_page {
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    // @media (max-width:767px) {
+    //     align-items: center;
+        
+    // }
+}
+
+.search_results {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 20px;
+}

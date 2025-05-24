@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  background-color: rgba(241, 252, 255, 1);
+}
+.root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 232px 502px;
+    column-gap: 20px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+}
+
