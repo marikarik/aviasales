@@ -28,8 +28,10 @@ const filtersSlice = createSlice({
                 if(state[nameCheckbox] && allCheked){
                     state['Все'] = false
                     state[nameCheckbox] = false
+                } else {
+                    state[nameCheckbox] = !state[nameCheckbox]
                 }
-                state[nameCheckbox] = !state[nameCheckbox]
+                
             } 
             const areAllFiltersSelected = Object.keys(state).filter((key) => key !== 'Все').every(key => state[key])
             if(areAllFiltersSelected){

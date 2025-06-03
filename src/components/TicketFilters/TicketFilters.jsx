@@ -8,8 +8,6 @@ import styles from './ticketFilters.module.scss'
 export function TicketFilters () {
     const checkboxes = useSelector(state => state.filters)
     const dispatch = useDispatch()
-    console.log(checkboxes);
-
    
     return (
         <aside className={`${styles.filters}`}>
