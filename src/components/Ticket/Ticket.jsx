@@ -1,4 +1,4 @@
-import styles from './Ticket.module.scss'
+import styles from './ticket.module.scss'
 import {formatFlightTimeRange, calculateFlightDuration} from '../../helpers/timeHelper'
 
 
