@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react"
 
 const baseQuery = retry(fetchBaseQuery({baseUrl: 'https://aviasales-test-api.kata.academy/'}),
-{maxRetries: 10})
+{maxRetries: 5})
 
 export const ticketSearchAPI = createApi({
     reducerPath: 'ticketSearchApi',
