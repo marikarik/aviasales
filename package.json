@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "format": "prettier --write ./src",
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
@@ -27,7 +30,16 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
     "sass": "^1.89.0",
     "vite": "^6.3.5"
+  },
+  "lint-staget": {
+    "**/*{js, jsx}": [
+      "npm run lint",
+      "prettier --write"
+    ]
   }
 }

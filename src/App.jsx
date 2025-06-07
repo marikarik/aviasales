@@ -1,16 +1,19 @@
 // import { useState } from 'react'
-import './index.scss'
-import { TicketFilters } from './components/TicketFilters/TicketFilters'
-import { TicketList } from './components/TicketList/TicketList'
+import styles from "./index.module.scss";
+import { TicketFilters } from "./components/TicketFilters/TicketFilters";
+import { TicketList } from "./components/TicketList/TicketList";
+import HeaderLogo from "./components/HeaderLogo/HeaderLogo";
 
 function App() {
-
   return (
     <>
-    <TicketFilters/>
-    <TicketList/>
+      <HeaderLogo />
+      <div className={`${styles.app_wrap}`}>
+        <TicketFilters />
+        <TicketList />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

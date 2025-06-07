@@ -1,16 +1,26 @@
 .search_page {
-    padding: 0;
-    display: grid;
-    gap: 20px;
-    // @media (max-width:767px) {
-    //     align-items: center;
-        
-    // }
+  width: 100%;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  // @media (max-width:767px) {
+  //     align-items: center;
+
+  // }
+  &:has(.search_error) {
+    height: 160px;
+  }
 }
 
 .search_results {
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 20px;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+  min-width: 320px;
+  max-width: 502px;
+  width: 100%;
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 }

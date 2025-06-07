@@ -1,48 +1,55 @@
 .ticket {
-    min-width: 320px;
-    max-width: 502px;
-    height: 184px;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 20px;
+  min-width: 320px;
+  width: 100%;
+  max-width: 502px;
+  height: 184px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  &__header {
+    font-size: 24px;
+    color: rgba(33, 150, 243, 1);
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
     display: grid;
-    gap: 10px;
-        &__header{
-            font-size: 24px;
-            color: rgba(33, 150, 243, 1);
-            padding-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-        &__info{
-            display: flex;
-            gap: 10px;
-            // width: 462px;
-            height: 39px;
-            justify-content: space-between;
-        }
+    grid-template-columns: 1fr 1fr 1fr;
+    // gap: 10px;
+    // width: 462px;
+    height: 39px;
+    justify-content: space-between;
+  }
 }
 
-.ticket__rout, .ticket__duration, .ticket__transfers {
-    display: grid;
+.ticket__rout,
+.ticket__duration,
+.ticket__transfers {
+  display: grid;
 }
 
-.ticket__rout_name, .ticket__duration_label, .ticket__transfers_count {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.5px;
-    vertical-align: middle;
-    text-transform: uppercase;
-    color: rgba(160, 176, 185, 1);
+.ticket__rout_name,
+.ticket__duration_label,
+.ticket__transfers_count {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: rgba(160, 176, 185, 1);
 }
 
-.ticket__rout_time, .ticket__duration_time, .ticket__transfers_rout{
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 0px;
-    vertical-align: middle;
-    color: rgba(74, 74, 74, 1);
+.ticket__rout_time,
+.ticket__duration_time,
+.ticket__transfers_rout {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: rgba(74, 74, 74, 1);
 }
-
