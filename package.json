@@ -19,6 +19,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
+    "reselect": "^5.1.1",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -36,7 +37,7 @@
     "sass": "^1.89.0",
     "vite": "^6.3.5"
   },
-  "lint-staget": {
+  "lint-staged": {
     "**/*{js, jsx}": [
       "npm run lint",
       "prettier --write"

@@ -7,7 +7,6 @@ const sortSlice = createSlice({
   initialState,
   reducers: {
     changeSort(state, action) {
-      console.log(action.payload);
       return action.payload;
     },
   },

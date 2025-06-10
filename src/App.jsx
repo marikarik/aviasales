@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import styles from "./index.module.scss";
 import { TicketFilters } from "./components/TicketFilters/TicketFilters";
 import { TicketList } from "./components/TicketList/TicketList";
