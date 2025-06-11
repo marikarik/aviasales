@@ -17,7 +17,7 @@ export function TicketList() {
   const dispatch = useDispatch();
 
   const { data: idData } = useGetIdQuery();
-  const [loadTickets, { data: ticketsData, isError }] =
+  const [loadTickets, { data: ticketsData, isError, isFetching }] =
     useLazyGetTicketsQuery();
 
   useEffect(() => {
@@ -30,10 +30,13 @@ export function TicketList() {
     if (ticketsData?.tickets) {
       dispatch(addTicketsToList(ticketsData.tickets));
     }
+  }, [ticketsData?.tickets, dispatch]);
 
-    if (ticketsData?.tickets && !ticketsData?.stop && !isError)
+  useEffect(() => {
+    if (ticketsData && !ticketsData.stop && !isError && !isFetching) {
       loadTickets(idData.searchId);
-  }, [ticketsData, idData, loadTickets, isError, dispatch]);
+    }
+  }, [ticketsData?.stop, isError, isFetching, idData, loadTickets]);
 
   const [index, setIndex] = useState(5);
 
